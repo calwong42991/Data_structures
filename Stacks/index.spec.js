@@ -20,24 +20,24 @@ console.log(stack.peek()); // 9
 console.log('------------------')
 console.log(stack.pop()) // 9
 console.log(stack.size()) //8
-console.log(stack.print()) // 
+console.log(stack.print()) // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 console.log('------------------')
 console.log(stack.pop())
 console.log(stack.size())
-console.log(stack.print())
+console.log(stack.print()) // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 console.log('------------------')
 console.log(stack.pop())
 console.log(stack.size())
-console.log(stack.print())
+console.log(stack.print()) // [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
 
 console.log('------------------')
 console.log(stack.pop())
 console.log(stack.size())
-console.log(stack.print())
+console.log(stack.print()) //[ 1, 2, 3, 4, 5 ]
 
 console.log('------------------')
 console.log(stack.pop())
 console.log(stack.size())
-console.log(stack.print())
+console.log(stack.print()) // [ 1, 2, 3, 4, 5 ]
