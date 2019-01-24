@@ -30,9 +30,17 @@ const priorityQueue = () => {
       let firstElementIndex = priorities[pQkeys[offset]];
       return elements[firstElementIndex];
     }
+    return null;
   };
 
-  const back = () => {};
+  const back = () => {
+    if(!isEmpty()){
+      let pQkeys = Object.keys(priorities);
+      let lastElementIndex = priorities[pQkeys[pQkeys.length - 1]];
+      return elements[lastElementIndex];
+    }
+    return null;
+  };
 
   const enqueue = (el, priority) => {
     if(Number.isNaN(+priority) || priority < 1){

@@ -1,0 +1,2 @@
+const setFn = require('./index');
+
