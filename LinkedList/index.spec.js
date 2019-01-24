@@ -1,3 +1,4 @@
+
 const linkedListFn = require('./index');
 
 const linkedList = linkedListFn();
@@ -14,3 +15,5 @@ linkedList.addLast(7)
 
 console.log(linkedList.toArray())
 console.log(linkedList.count());
+
+

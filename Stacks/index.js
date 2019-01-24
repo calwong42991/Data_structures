@@ -4,8 +4,6 @@ const stack = () => {
 
   const size = () => top;
 
-  const print = () => elements;
-
   const push = (element) => {
     elements.push(element);
     top += 1;
@@ -42,8 +40,8 @@ const stack = () => {
 
   return {
     size,
-    print,
     push,
+    isEmpty,
     pop,
     peek,
     clear
