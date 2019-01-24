@@ -33,7 +33,7 @@ const linkedList = () => {
   const find = (val) => {
     let current = headNode;
     while(current !== null){
-      if(current.value = val){
+      if(current.value === val){
         return current;
       }
       current = current.getNext();
@@ -80,7 +80,7 @@ const linkedList = () => {
         current = current.getNext();
       }
     }
-    if(current = null){
+    if(current === null){
       throw new Error(`node ${value} not found`);
     }
   };
@@ -88,7 +88,7 @@ const linkedList = () => {
   const addAfter = (value, newValue) => {
     let current = headNode;
 
-    while( current.getValue() !== null ){
+    while( current !== null ){
       if(current.getValue() === value){
         current.setNext(node(newValue, current.getNext()));
         nodesCount += 1;
@@ -107,7 +107,7 @@ const linkedList = () => {
     let current = headNode;
     while( current !== null){
       if(current.getValue() === value){
-        if(prev === next ){
+        if(prev === null ){
           removeFirst();
         } else {
           prev.setNext(current.getNext());
