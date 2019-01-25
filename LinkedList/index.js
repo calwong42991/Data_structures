@@ -33,8 +33,8 @@ const linkedList = () => {
   const find = (val) => {
     let current = headNode;
     while(current !== null){
-      if(current.value === val){
-        return current;
+      if(current.getValue() === val){
+        return `${val} is in Linked List with these functions ${current}`;
       }
       current = current.getNext();
     }
@@ -87,10 +87,10 @@ const linkedList = () => {
 
   const addAfter = (value, newValue) => {
     let current = headNode;
-
     while( current !== null ){
       if(current.getValue() === value){
-        current.setNext(node(newValue, current.getNext()));
+        const n = node(newValue, current.getNext())
+        current.setNext(n);
         nodesCount += 1;
         break;
       } else {
@@ -100,25 +100,6 @@ const linkedList = () => {
     if(current === null){
       throw new Error(`node ${value} not found`);
     }
-  };
-
-  const remove = (value) => {
-    let prev = null;
-    let current = headNode;
-    while( current !== null){
-      if(current.getValue() === value){
-        if(prev === null ){
-          removeFirst();
-        } else {
-          prev.setNext(current.getNext());
-          nodesCount -= 1;
-        }
-      } else {
-        prev = current;
-        current = current.getNext();
-      }
-    }
-
   };
 
   const removeFirst = () => {
@@ -144,6 +125,24 @@ const linkedList = () => {
     } else {
       prev.setNext(null);
       nodesCount -= 1;
+    }
+  };
+
+  const remove = (value) => {
+    let prev = null;
+    let current = headNode;
+    while( current !== null){
+      if(current.getValue() === value){
+        if(prev === null ){
+          removeFirst();
+        } else {
+          prev.setNext(current.getNext());
+          nodesCount -= 1;
+        }
+      } else {
+        prev = current;
+        current = current.getNext();
+      }
     }
   };
 
@@ -175,9 +174,9 @@ const linkedList = () => {
     addLast,
     addBefore,
     addAfter,
-    remove,
     removeFirst,
     removeLast,
+    remove,
     traverse,
     toArray,
     clear

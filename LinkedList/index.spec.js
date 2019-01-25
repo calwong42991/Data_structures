@@ -16,4 +16,5 @@ linkedList.addLast(7)
 console.log(linkedList.toArray())
 console.log(linkedList.count());
 
+console.log(linkedList.find(7))
 
