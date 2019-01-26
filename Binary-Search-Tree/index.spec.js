@@ -1,0 +1,1 @@
+const binarySearchTreeFn = require('./index');
