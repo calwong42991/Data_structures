@@ -1,0 +1,1 @@
+const maxHeapFn = require('./index');
