@@ -59,12 +59,10 @@ class HashTable {
     bucketLinkedList.traverse({
       callback: nodeValue => {
         if(nodeValue.getValue().key === key){
-          console.log('index. get --> ', nodeValue.getValue())
           node = nodeValue;
         }
       }
     });
-    console.log('index . get --> ', node.getValue());
     return node.getValue().key ? node.getValue().key : undefined;
   }
 
