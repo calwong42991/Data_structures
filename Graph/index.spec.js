@@ -1,0 +1,1 @@
+const graphFn = require('./index');
