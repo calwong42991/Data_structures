@@ -1,4 +1,3 @@
-
 const linkedListFn = require('./index');
 
 const linkedList = linkedListFn();

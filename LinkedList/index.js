@@ -146,10 +146,10 @@ const linkedList = () => {
     }
   };
 
-  const traverse = (cb) => {
+  const traverse = ({callback}) => {
     let current = headNode;
     while(current !== null){
-      cb(current);
+      callback(current);
       current = current.getNext();
     }
   };
