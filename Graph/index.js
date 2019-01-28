@@ -1,3 +1,4 @@
+const shortestPath = require('./shortest-path');
 const queueFn = require('../Queues/index');
 
 const vertex = (k, v) => {
@@ -131,6 +132,11 @@ const graph = (options) => {
         bfsTraverse(key, cb);
         break;
     }
+  };
+
+  self.findShortestPath = (key1, key2, type) => {
+    const algorithm = shortestPath[type] || shortestPath.dfs;
+    return algorithm(self)(key1, key2);
   };
 
   self.clear = () => {
