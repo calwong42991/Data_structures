@@ -1,0 +1,1 @@
+const trieFn = require('./index');
