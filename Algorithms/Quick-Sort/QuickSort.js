@@ -1,6 +1,6 @@
-import Sort from '../Sort';
+const Sort = require('../Sort');
 
-export default class QuickSort extends Sort {
+class QuickSort extends Sort {
 
   sort(originalArray) {
     const array = [...originalArray];
@@ -35,3 +35,5 @@ export default class QuickSort extends Sort {
     return leftArraySorted.concat(centerArray, rightArraySorted);
   }
 }
+
+module.exports = QuickSort;

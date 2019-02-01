@@ -1,6 +1,6 @@
-import Sort from '../Sort';
+const Sort = require('../Sort');
 
-export default class CountingSort extends Sort {
+class CountingSort extends Sort {
   sort(originalArray, smallestElement = undefined, biggestElement = undefined) {
     let detectedSmallestElement = smallestElement || 0;
     let detectedBiggestElement = biggestElement || 0;
@@ -50,3 +50,5 @@ export default class CountingSort extends Sort {
     return sortedArray;
   }
 }
+
+module.exports = CountingSort;

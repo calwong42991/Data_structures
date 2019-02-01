@@ -1,6 +1,6 @@
-import Sort from '../Sort';
+const Sort = require('../Sort');
 
-export default class MergeSort extends Sort {
+class MergeSort extends Sort {
   sort(originalArray) {
     this.callbacks.visitingCallback(null);
 
@@ -46,3 +46,5 @@ export default class MergeSort extends Sort {
     return sortedArray;
   }
 }
+
+module.exports = MergeSort;
