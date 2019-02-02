@@ -1,4 +1,4 @@
-const Comparator = require('../utils/comparator/comparator');
+const Comparator = require('../../utils/comparator/comparator');
 
 const binarySearch = (sortedArray, seekElement, comparatorCallback) => {
   const comparator = new Comparator(comparatorCallback);
