@@ -5,7 +5,7 @@ const priorityQueue = () => {
 
   const size = () => elements.length;
 
-  const isEmpty = () => elements.length === 0;
+  const isEmpty = () => size() === 0;
 
 
   const toArray = () => {
