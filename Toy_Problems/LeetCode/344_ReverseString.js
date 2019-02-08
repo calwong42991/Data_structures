@@ -2,8 +2,10 @@
 
 const reverseString = (s) => {
   let result = "";
-  for(let i = s.length - 1; i >= 0; i--){
-    result += s[i];
+  let len = s.length - 1;
+  while(len >= 0){ 
+    result += s[len];
+    len--;
   }
   return result;
 }
@@ -12,6 +14,7 @@ const reverseStringRecurrsion = (str) => {
   if(str === ""){
     return "";
   }
+
   return reverseStringRecurrsion(str.substring(1)) + str.charAt(0);
 }
 
