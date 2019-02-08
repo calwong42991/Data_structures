@@ -8,4 +8,12 @@ const reverseString = (s) => {
   return result;
 }
 
+const reverseStringRecurrsion = (str) => {
+  if(str === ""){
+    return "";
+  }
+  return reverseStringRecurrsion(str.substring(1)) + str.charAt(0);
+}
+
 console.log(reverseString('something'));
+console.log(reverseStringRecurrsion('something'));
