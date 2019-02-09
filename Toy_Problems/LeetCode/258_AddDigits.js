@@ -1,6 +1,14 @@
 /* https://leetcode.com/problems/add-digits/ */
 
 const addDigits = (num) => {
+  while(num >= 10){
+    num = parseInt(num/10) + num%10;
+  }
+  return num;
+}
+
+
+const addDigitsRecurssive = (num) => {
   // check if num is a number else return not a number
   if(Number.isNaN(num)){ return `Not a number`};
 
