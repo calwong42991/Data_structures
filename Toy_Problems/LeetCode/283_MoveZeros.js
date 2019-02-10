@@ -6,15 +6,18 @@ const moveZeroes = (nums) => {
 
   while(pointer < end){
     if(nums[pointer] === 0){
+      console.log(pointer)
       nums.push(0);
       nums.splice(pointer, 1)
+      end--;
+    } else {
+      pointer++;
     }
-    pointer += 1;
   }
 
   return nums;
 }
 
-let arr = [0, 1, 0, 3, 12];
+let arr = [0,0, 1];
 
 console.log(moveZeroes(arr));
