@@ -17,7 +17,27 @@ const invertTree = (root) => {
 
 // Breadth first solution
 const invertTreeBF = (root) => {
+  if (!root) {
+    return null;
+  }
 
+  let queue = [root];
+
+  while (queue.length > 0) {
+    const node = queue.shift();
+
+    // swap
+    [node.left, node.right] = [node.right, node.left];
+
+    if (node.left) {
+      queue.push(node.left);
+    }
+
+    if (node.right) {
+      queue.push(node.right);
+    }
+  }
+  return root;
 }
 
 // Depth First solution
