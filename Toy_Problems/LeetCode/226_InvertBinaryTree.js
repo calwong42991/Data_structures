@@ -42,5 +42,23 @@ const invertTreeBF = (root) => {
 
 // Depth First solution
 const invertTreeDF = (root) => {
+  if (!root) return null;
 
+  let stack = [root];
+
+  while (stack.length > 0) {
+
+    const node = stack.pop();
+
+    [node.left, node.right] = [node.right, node.left];
+
+    if (node.left) {
+      stack.push(node.left)
+    };
+    if (node.right) {
+      stack.push(node.right)
+    };
+  }
+
+  return root;
 }
