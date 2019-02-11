@@ -1,5 +1,6 @@
 /* https://leetcode.com/problems/invert-binary-tree/ */
 
+// Recurssive solution
 const invertTree = (root) => {
   if (!root) {
     return root
@@ -12,4 +13,14 @@ const invertTree = (root) => {
   invertTree(root.left);
   invertTree(root.right);
   return root;
+}
+
+// Breadth first solution
+const invertTreeBF = (root) => {
+
+}
+
+// Depth First solution
+const invertTreeDF = (root) => {
+
 }
