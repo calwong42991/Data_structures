@@ -11,7 +11,7 @@ const Fibonacci = (n) => {
   let iterationsCounter = n - 1;
 
   while (iterationsCounter) {
-    currentValue += previousValue;
+    currentValue = currentValue + previousValue;
     previousValue = currentValue - previousValue;
 
     fibSequence.push(currentValue);
