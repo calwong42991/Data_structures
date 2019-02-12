@@ -23,9 +23,16 @@ const PascalTriangle = (num) => {
   return output;
 }
 
-console.log(PascalTriangle(1));
-console.log(PascalTriangle(2));
-console.log(PascalTriangle(3));
-console.log(PascalTriangle(4));
-console.log(PascalTriangle(5));
-console.log(PascalTriangle(6));
+const PascalTriangleAlt = (num) => {
+  let currentLine = [1];
+
+  let currentLineSize = num + 1;
+
+  for(let i = 1; i < currentLineSize; i++){
+    currentLine[i] = currentLine[i - 1] * (num - i + 1)/ i;
+  }
+
+  return currentLine;
+}
+
+console.log(PascalTriangleAlt(5));
