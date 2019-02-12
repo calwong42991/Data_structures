@@ -24,15 +24,26 @@ const PascalTriangle = (num) => {
 }
 
 const PascalTriangleAlt = (num) => {
-  let currentLine = [1];
-
-  let currentLineSize = num + 1;
-
-  for(let i = 1; i < currentLineSize; i++){
-    currentLine[i] = currentLine[i - 1] * (num - i + 1)/ i;
+  if(Number.isNaN(num) || num < 0){
+    return null;
   }
+  
+  let pascalTriangles = [];
+  let start = 0;
 
-  return currentLine;
+  while(start <= num){
+    let currentLine = [1];
+    let currentLineSize = start + 1;
+
+    for(let i = 1; i < currentLineSize; i++){
+      currentLine[i] = currentLine[i - 1] * (start - i + 1)/ i;
+    }
+
+    pascalTriangles.push(currentLine);
+    start++;
+  } 
+
+  return pascalTriangles;
 }
 
-console.log(PascalTriangleAlt(5));
+console.log(PascalTriangleAlt(6));
