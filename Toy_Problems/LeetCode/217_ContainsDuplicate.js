@@ -15,16 +15,23 @@ const containsDuplicate = (nums) => {
   // return false;
 
 
-  let hash = {};
+  // let hash = {};
 
-  for(let elm of nums){
-    if(hash[elm]){
-      return hash[elm];
-    }else {
-      hash[elm] = true;
-    }
+  // for(let elm of nums){
+  //   if(hash[elm]){
+  //     return hash[elm];
+  //   }else {
+  //     hash[elm] = true;
+  //   }
+  // }
+  // return false
+
+  let set = new Set();
+  for(let i = 0; i < nums.length; i++){
+    if(set.has(nums[i])) return true;
+    set.add(nums[i]);
   }
-  return false
+  return false;
 }
 
 console.log(containsDuplicate([1,2,3, 1]));
