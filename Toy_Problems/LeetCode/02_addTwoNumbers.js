@@ -1,7 +1,11 @@
 /* https://leetcode.com/problems/add-two-numbers/description/ */
 
-var addTwoNumbers = function (l1, l2) {
+function ListNode(val) {
+  this.val = val;
+  this.next = null;
+}
 
+var addTwoNumbers = function (l1, l2) {
   var c = 0;
   var ret = new ListNode(0);
   var curr = ret;
