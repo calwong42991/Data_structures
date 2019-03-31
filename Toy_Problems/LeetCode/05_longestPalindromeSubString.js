@@ -23,6 +23,4 @@ const longestPalindrome = (s) => {
   return res;
 }
 
-
-
 console.log(longestPalindrome('babad'));
