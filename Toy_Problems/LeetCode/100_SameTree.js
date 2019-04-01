@@ -1,11 +1,11 @@
 /* https://leetcode.com/problems/same-tree/ */
 
 const isSameTree = (tree1, tree2) => {
-  if(!tree1 && !tree2){
+  if (!tree1 && !tree2) {
     return true;
   }
 
-  if(!tree1 || !tree2 || tree1.val !== tree2.val){
+  if (!tree1 || !tree2 || tree1.val !== tree2.val) {
     return false;
   }
 
